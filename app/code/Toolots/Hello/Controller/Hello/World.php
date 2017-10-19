@@ -14,11 +14,14 @@ class World extends \Magento\Framework\App\Action\Action
      * Constructor
      *
      * @param \Magento\Framework\App\Action\Context  $context
+     * @param \Magento\Framework\View\Result\PageFactory $resultPageFactory
      */
     public function __construct(
-        \Magento\Framework\App\Action\Context $context
+        \Magento\Framework\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $resultPageFactory
     )
     {
+        $this->resultPageFactory = $resultPageFactory;
         parent::__construct($context);
     }
 
@@ -29,7 +32,6 @@ class World extends \Magento\Framework\App\Action\Action
      */
     public function execute()
     {
-        echo "Hello World";
-        exit;
+        return $this->resultPageFactory->create();
     }
 }
