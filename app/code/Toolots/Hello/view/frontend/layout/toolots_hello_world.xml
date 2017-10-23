@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="content">
-            <block class="Magento\Framework\View\Element\Template" name="hello.world" template="Toolots_Hello::hello/world.phtml"/>
+            <block class="Toolots\Hello\Block\Post" name="hello.world" template="Toolots_Hello::hello/world.phtml"/>
         </referenceContainer>
     </body>
 </page>
